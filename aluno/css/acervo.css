@@ -1,0 +1,331 @@
+/* Estilos gerais */
+body {
+    margin-top: 100px;
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    width: 100%;
+    background: linear-gradient(to right, #ddd3ed, #bca9da);
+    transition: background-color 0.3s ease;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 64px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-right: auto;
+}
+
+.logo a {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: black;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.logo img {
+    width: 230px;
+    height: auto;
+    border-radius: 10%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
+}
+
+.mobilemenu {
+    cursor: pointer;
+    display: none;
+    margin: 0; /* Remove margens extras */
+    padding: 0; /* Remove padding extras */
+    border: none; /* Remove bordas extras */
+}
+
+.mobilemenu div {
+    width: 32px;
+    height: 2px;
+    background: black;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+.info1.box-home {
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+.info1.box-home:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Navegação */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    margin-left: 40px;
+    position: relative;
+}
+
+.nav-list a {
+    padding-block: 16px;
+    color: black;
+    letter-spacing: 3px;
+}
+
+
+
+.nav-list li:hover::before {
+    transform: scaleX(1);
+}
+
+/* Estilo de Pesquisa */
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: transparent; /* Define o background como transparente */
+    border: 1px solid var(--color-neutral-30);
+    border-radius: 25px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+    margin-left: 6%; /* Espaçamento à esquerda para afastar do item anterior */
+
+}
+
+.search-container:hover {
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.search-input {
+    border: none;
+    background: none;
+    color: var(black);
+    padding: 5px;
+    outline: none;
+    width: 150px;
+    transition: width 0.3s ease;
+}
+
+.search-input::placeholder {
+    color: var(--color-neutral-30);
+    font-style: italic;
+}
+
+.search-input:focus {
+    width: 250px;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.search-button i {
+    font-size: 1.2rem;
+}
+
+.search-button:hover {
+    color: var(--hover-color);
+}
+
+.acervo-row {
+    margin-top: -7rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.historic {
+    margin-top: -13rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.search-container {
+    margin-left: 2%; /* Reduz a margem à esquerda */
+}
+
+.acervo-item {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    margin: 20px;
+    background-color: #ffffff; /* Garantindo o fundo branco */
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.acervo-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.acervo-item__text {
+    padding: 20px;
+    flex: 1;
+    background-color: #ffffff; /* Fundo branco para o texto */
+}
+
+.acervo-item__text h2 {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-bottom: 20px; /* Aumentando a margem inferior */
+    border-bottom: 3px solid var(--primary-color); /* Linha mais espessa abaixo do título */
+    padding-bottom: 15px; /* Padding adicional para o título */
+    position: relative;
+}
+
+.acervo-item__text p {
+    font-size: 16px;
+    color: var(--color-neutral-30);
+    margin-bottom: 15px; /* Aumentando a margem inferior para mais separação */
+}
+
+.acervo-item__text strong {
+    color: var(--primary-color);
+}
+
+.disponível {
+    color: #00FF00; /* Verde */
+}
+
+.indisponível {
+    color: #FF0000; /* Vermelho */
+}
+
+footer {
+    background-color: var(--color-neutral-10);
+    color: var(--color-neutral-40);
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+
+
+/* Versão Mobile */
+@media (max-width: 750px) {
+    .nav {
+        width: 100%;
+    }
+
+    .mobilemenu {
+        display: flex;
+    }
+
+    .nav-list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #bca9da;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .nav.active .nav-list {
+        transform: translateY(0);
+        pointer-events: all;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        margin-right: 27px;
+    }
+
+    .nav-list a {
+        font-size: 24px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .nav.active .nav-list a {
+        opacity: 1;
+    }
+
+    .acervo-item {
+        flex-basis: 100%;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .acervo-item img {
+        width: 80%;
+        height: auto;
+    }
+
+    .acervo-item__text {
+        padding: 10px;
+    }
+
+    .search-input {
+        width: 100px;
+    }
+    .search-input:focus {
+        width: 150px;
+    }
+
+    .search-container {
+        margin-top: 30px;
+        max-width: 300px; /* Limita a largura máxima */
+    }
+}

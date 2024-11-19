@@ -1,0 +1,471 @@
+:root {
+    --bg-color: #0a398f;
+    --bg-color-light: #0a368f;
+    --text-color-hover: #fff;
+    --box-shadow-color: rgba(47, 47, 48, 0.48);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 400px;
+    display: flex;
+    flex-direction: row; /* Alinha os cards horizontalmente */
+    gap: 20px; /* Espaçamento entre os cards */
+    justify-content: center; /* Centraliza os cards horizontalmente no contêiner */
+    align-items: center; /* Alinha os cards verticalmente no contêiner */
+}
+
+/* ------------------------------------------------------------- */
+.card1 {
+    width: 200px;
+    height: 300px;
+    background: #fff;
+    border-radius: 20px; /* Aumenta o arredondamento das bordas */
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+}
+
+.card1:hover {
+    transform: translateY(-5px) scale(1.005) translateZ(0);
+    box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11), 0 24px 46px var(--box-shadow-color);
+}
+
+.card1:hover .overlay1 {
+    transform: scale(4) translateZ(0);
+}
+
+.card1:hover .circle1 {
+    border-color: var(--bg-color-light);
+    background: var(--bg-color);
+}
+
+.card1:hover .circle1:after {
+    background: var(--bg-color-light);
+}
+
+.card1:hover p {
+    color: var(--text-color-hover);
+}
+
+.card1 p {
+    font-size: 18px;
+    font-weight: 700;
+    color: #4c5656;
+    margin-top: 30px;
+    z-index: 1000;
+    transition: color 0.3s ease-out;
+    margin-left: 16px;
+}
+
+.circle1 {
+    width: 131px;
+    height: 131px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid var(--bg-color);
+    display: flex;
+    justify-content: center;
+    margin-left: 15px;
+    margin-bottom: -25px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease-out;
+}
+
+.circle1:after {
+    content: "";
+    width: 118px;
+    height: 118px;
+    display: block;
+    position: absolute;
+    background: var(--bg-color);
+    border-radius: 50%;
+    top: 6px;
+    left: 5px;
+    transition: opacity 0.3s ease-out;
+}
+
+.circle1 svg {
+    z-index: 10000;
+    transform: translateZ(0);
+    fill: #fff;
+}
+
+.overlay1 {
+    width: 118px;
+    position: absolute;
+    height: 118px;
+    border-radius: 50%;
+    background: var(--bg-color);
+    top: 70px;
+    left: 50px;
+    z-index: 0;
+    transition: transform 0.3s ease-out;
+}
+
+/* card2 */
+
+.card2 {
+    width: 200px;
+    height: 300px;
+    background: #fff;
+    border-radius: 20px; /* Aumenta o arredondamento das bordas */
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+}
+
+.card2:hover {
+    transform: translateY(-5px) scale(1.005) translateZ(0);
+    box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11), 0 24px 46px var(--box-shadow-color);
+}
+
+.card2:hover .overlay2 {
+    transform: scale(4) translateZ(0);
+}
+
+.card2:hover .circle2 {
+    border-color: var(--bg-color-light);
+    background: var(--bg-color);
+}
+
+.card2:hover .circle2:after {
+    background: var(--bg-color-light);
+}
+
+.card2:hover p {
+    color: var(--text-color-hover);
+}
+
+.card2 p {
+    font-size: 18px;
+    font-weight: 700;
+    color: #4c5656;
+    margin-top: 30px;
+    z-index: 1000;
+    transition: color 0.3s ease-out;
+    margin-left: 16px;
+}
+
+.circle2 {
+    width: 131px;
+    height: 131px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid var(--bg-color);
+    display: flex;
+    justify-content: center;
+    margin-left: 15px;
+    margin-bottom: -25px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease-out;
+}
+
+.circle2:after {
+    content: "";
+    width: 118px;
+    height: 118px;
+    display: block;
+    position: absolute;
+    background: var(--bg-color);
+    border-radius: 50%;
+    top: 6px;
+    left: 5px;
+    transition: opacity 0.3s ease-out;
+}
+
+.circle2 svg {
+    z-index: 10000;
+    transform: translateZ(0);
+    fill: #fff;
+}
+
+.overlay2 {
+    width: 118px;
+    position: absolute;
+    height: 118px;
+    border-radius: 50%;
+    background: var(--bg-color);
+    top: 70px;
+    left: 50px;
+    z-index: 0;
+    transition: transform 0.3s ease-out;
+}
+
+/* card 3 */
+
+.card3 {
+    width: 200px;
+    height: 300px;
+    background: #fff;
+    border-radius: 20px; /* Aumenta o arredondamento das bordas */
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+}
+
+.card3:hover {
+    transform: translateY(-5px) scale(1.005) translateZ(0);
+    box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11), 0 24px 46px var(--box-shadow-color);
+}
+
+.card3:hover .overlay3 {
+    transform: scale(4) translateZ(0);
+}
+
+.card3:hover .circle3 {
+    border-color: var(--bg-color-light);
+    background: var(--bg-color);
+}
+
+.card3:hover .circle3:after {
+    background: var(--bg-color-light);
+}
+
+.card3:hover p {
+    color: var(--text-color-hover);
+}
+
+.card3 p {
+    font-size: 18px;
+    font-weight: 700;
+    color: #4c5656;
+    margin-top: 30px;
+    z-index: 1000;
+    transition: color 0.3s ease-out;
+    margin-left: 16px;
+}
+
+.circle3 {
+    width: 131px;
+    height: 131px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid var(--bg-color);
+    display: flex;
+    justify-content: center;
+    margin-left: 15px;
+    margin-bottom: -25px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease-out;
+}
+
+.circle3:after {
+    content: "";
+    width: 118px;
+    height: 118px;
+    display: block;
+    position: absolute;
+    background: var(--bg-color);
+    border-radius: 50%;
+    top: 6px;
+    left: 5px;
+    transition: opacity 0.3s ease-out;
+}
+
+.circle3 svg {
+    z-index: 10000;
+    transform: translateZ(0);
+    fill: #fff;
+}
+
+.overlay3 {
+    width: 118px;
+    position: absolute;
+    height: 118px;
+    border-radius: 50%;
+    background: var(--bg-color);
+    top: 70px;
+    left: 50px;
+    z-index: 0;
+    transition: transform 0.3s ease-out;
+}
+
+/* card 4 */
+
+.card4 {
+    width: 200px;
+    height: 300px;
+    background: #fff;
+    border-radius: 20px; /* Aumenta o arredondamento das bordas */
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+}
+
+.card4:hover {
+    transform: translateY(-5px) scale(1.005) translateZ(0);
+    box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11), 0 24px 46px var(--box-shadow-color);
+}
+
+.card4:hover .overlay4 {
+    transform: scale(4) translateZ(0);
+}
+
+.card4:hover .circle4 {
+    border-color: var(--bg-color-light);
+    background: var(--bg-color);
+}
+
+.card4:hover .circle4:after {
+    background: var(--bg-color-light);
+}
+
+.card4:hover p {
+    color: var(--text-color-hover);
+}
+
+.card4 p {
+    font-size: 18px;
+    font-weight: 700;
+    color: #4c5656;
+    margin-top: 30px;
+    z-index: 1000;
+    transition: color 0.3s ease-out;
+    margin-left: 16px;
+}
+
+.circle4 {
+    width: 131px;
+    height: 131px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid var(--bg-color);
+    display: flex;
+    justify-content: center;
+    margin-left: 15px;
+    margin-bottom: -25px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease-out;
+}
+
+.circle4:after {
+    content: "";
+    width: 118px;
+    height: 118px;
+    display: block;
+    position: absolute;
+    background: var(--bg-color);
+    border-radius: 50%;
+    top: 6px;
+    left: 5px;
+    transition: opacity 0.3s ease-out;
+}
+
+.circle4 svg {
+    z-index: 10000;
+    transform: translateZ(0);
+    fill: #fff;
+}
+
+.overlay4 {
+    width: 118px;
+    position: absolute;
+    height: 118px;
+    border-radius: 50%;
+    background: var(--bg-color);
+    top: 70px;
+    left: 50px;
+    z-index: 0;
+    transition: transform 0.3s ease-out;
+}
+
+@media (max-width: 750px) {
+    .container {
+        height: 1000px; /* Ajusta a altura para se adaptar ao conteúdo */
+        flex-direction: column; /* Alinha os cards verticalmente */
+        gap: 20px; 
+        
+    }
+
+    @media (max-width: 750px) {
+        .container {
+            height: 1150px; /* Ajusta a altura para se adaptar ao conteúdo */
+            flex-direction: column; /* Alinha os cards verticalmente */
+            gap: 20px; 
+        }
+    
+        .card1, .card2, .card3, .card4 {
+            width: 90%; /* Ajusta a largura dos cartões */
+            max-width: 200px; 
+            height: 250px; /* Ajusta a altura automaticamente */
+        }
+    
+        .circle1, .circle2, .circle3, .circle4 {
+            width: 100px; /* Ajusta o tamanho do círculo */
+            height: 100px; /* Ajusta o tamanho do círculo */
+            margin-bottom: 20px;
+            margin-right: 20px;
+        }
+    
+        .circle1:after, .circle2:after, .circle3:after, .circle4:after {
+            width: 90px; /* Ajusta o tamanho do círculo interno */
+            height: 90px; /* Ajusta o tamanho do círculo interno */
+            top: 4px; /* Ajusta a posição do círculo interno */
+            left: 4px; /* Ajusta a posição do círculo interno */
+        }
+    
+        .overlay1, .overlay2, .overlay4 {
+            width: 100px; /* Ajusta o tamanho da sobreposição */
+            height: 100px; /* Ajusta o tamanho da sobreposição */
+            top: 40px; /* Ajusta a posição da sobreposição */
+            left: 50px; /* Ajusta a posição da sobreposição */
+        }
+
+        .overlay3 {
+            width: 100px; /* Ajusta o tamanho da sobreposição */
+            height: 100px; /* Ajusta o tamanho da sobreposição */
+            top: 28px; /* Ajusta a posição da sobreposição */
+            left: 50px; /* Ajusta a posição da sobreposição */
+        }
+    }
+    
+}
+
+@media (max-width: 450px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}

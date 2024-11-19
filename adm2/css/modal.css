@@ -1,0 +1,50 @@
+/* estilo.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.usuario-container {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.usuario-title {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.btn-voltar {
+    text-decoration: none;
+    color: #007bff;
+    float: right;
+}
+
+.btn-voltar:hover {
+    text-decoration: underline;
+}
+
+.usuario-info {
+    margin-bottom: 15px;
+}
+
+.usuario-label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.usuario-data {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.usuario-error {
+    color: red;
+    margin-top: 20px;
+}

@@ -1,0 +1,86 @@
+.user-box {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Alinha à direita */
+    padding: 12px 16px; /* Espaçamento interno melhorado */
+    background: #ffffff; /* Fundo branco para contraste mais limpo */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada */
+    border: 1px solid #e0e0e0; /* Adiciona uma borda sutil */
+    position: fixed; /* Fixa a posição na tela */
+    top: 100px; /* Distância do topo da página */
+    right: 20px; /* Distância do lado direito da página */
+    z-index: 2000; /* Garante que a caixa fique acima de outros elementos */
+    transition: all 0.3s ease; /* Transição suave para todas as propriedades */
+}
+
+.user-avatar {
+    width: 55px; /* Tamanho do avatar */
+    height: 55px; /* Tamanho do avatar */
+    border-radius: 50%;
+    border: 3px solid #007bff; /* Borda mais espessa para destaque */
+    object-fit: cover; /* Garante que a imagem do avatar se ajuste bem */
+    transition: border-color 0.3s ease; /* Transição suave para a cor da borda */
+    margin-right: 15px; /* Espaçamento entre o avatar e as informações */
+}
+
+.user-avatar:hover {
+    border-color: #0056b3; /* Muda a cor da borda ao passar o mouse */
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.3s ease; /* Transição suave para a opacidade */
+    padding-right: 20px; /* Espaço extra à direita */
+}
+
+.user-name {
+    font-size: 20px; /* Aumenta um pouco o tamanho da fonte para destaque */
+    font-weight: 700; /* Font-weight mais forte para um visual mais impactante */
+    color: #333; /* Cor do texto mais escura para melhor contraste */
+    margin-bottom: 4px; /* Menos espaçamento inferior */
+}
+
+.logout:hover {
+    color: #ffffff; /* Cor do texto ao passar o mouse */
+    background-color: #007bff; /* Cor de fundo ao passar o mouse */
+    text-decoration: none;
+}
+
+.user-box.minimized {
+    width: 65px; /* Ajusta a largura para incluir a borda do avatar */
+    height: 65px; /* Ajusta a altura para incluir a borda do avatar */
+    padding: 0; /* Remove o padding */
+    border-radius: 50%; /* Faz a caixa se tornar um círculo */
+    justify-content: center; /* Centraliza o conteúdo */
+    align-items: center; /* Centraliza o conteúdo */
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites */
+    display: flex; /* Garante que o avatar seja centralizado */
+}
+
+.user-box.minimized .user-avatar {
+    position: absolute;
+    width: 100%; /* Ajusta o tamanho do avatar para ocupar todo o círculo */
+    height: 100%; /* Ajusta o tamanho do avatar para ocupar todo o círculo */
+    object-fit: cover; /* Garante que a imagem do avatar se ajuste bem */
+    transform: translate(12%, -9%); /* Centraliza o avatar */
+    margin-bottom: -11px;
+}
+
+.user-box.minimized .user-info {
+    display: none; /* Esconde as informações do usuário */
+}
+
+@media (max-width: 750px) {
+    .user-box {
+        top: auto; /* Remove a posição fixa do topo */
+        right: auto; /* Remove a posição fixa da direita */
+        bottom: 10px; /* Define a distância do fundo da página */
+        left: 10px; /* Define a distância da esquerda da página */
+        width: 80%; /* Ajusta a largura para 80% da largura da tela */
+        max-width: 300px; /* Define uma largura máxima para a caixa */
+        box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1); /* Ajusta a sombra para um efeito mais suave */
+    }
+}
+

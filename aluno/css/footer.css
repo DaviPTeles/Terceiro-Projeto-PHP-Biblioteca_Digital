@@ -1,0 +1,181 @@
+:root {
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+    --primary-color: #03009e;
+    --hover-color: #180dbc;
+}
+
+footer {
+    width: 100%;
+    color: var(--color-neutral-40);
+    background-color: var(--color-neutral-10);
+    padding: 2rem; /* Ajuste de padding para mais espaço */
+    position: relative; /* Necessário para a posição absoluta do copyright */
+    border-top: 1px solid var(--color-neutral-30); /* Separador discreto no topo */
+}
+
+#footer_content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 2rem 3.5rem;
+    gap: 2rem;
+    max-width: 1200px; /* Limitar a largura máxima do footer */
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+#footer_contacts h1 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+#footer_social_media {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+#footer_social_media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    color: var(--color-neutral-40);
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adicionado sombra para efeito de profundidade */
+}
+
+#footer_social_media .footer-link:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#instagram {
+    background: linear-gradient(135deg, #7f37c9, #ff2992, #ff9807);
+}
+
+#X {
+    background: black;
+}
+
+#facebook {
+    background: #4267b3;
+}
+
+#linkedin {
+    background: #0e76a8;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+}
+
+.footer-list .footer-link {
+    color: var(--color-neutral-30);
+    transition: color 0.3s ease;
+}
+
+.footer-list .footer-link:hover {
+    color: var(--primary-color);
+    text-decoration: underline; /* Adicionado underline para links */
+}
+
+#footer_sub {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#footer_sub p {
+    color: var(--color-neutral-30);
+    font-size: 1rem;
+}
+
+#input_group {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-neutral-0);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adicionado sombra sutil */
+}
+
+#input_group input {
+    all: unset;
+    padding: 0.75rem;
+    width: 100%;
+    color: var(--color-neutral-40);
+    background-color: transparent;
+    border: 1px solid var(--color-neutral-30);
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    font-size: 1rem;
+}
+
+#input_group input::placeholder {
+    color: var(--color-neutral-30);
+    font-style: italic;
+}
+
+#input_group button {
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--color-neutral-0);
+    padding: 0.75rem 1.25rem; /* Ajustado padding para um tamanho mais adequado */
+    font-size: 1.125rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 0 4px 4px 0; /* Adicionado borda arredondada */
+}
+
+#input_group button:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.05); /* Adiciona efeito de aumento ao passar o mouse */
+}
+
+#footer_copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-neutral-30);
+    background-color: var(--color-neutral-0);
+    font-size: 0.9rem;
+    padding: 1rem 2rem; /* Ajuste do padding */
+    font-weight: 300;
+    position: absolute; /* Tornar o copyright fixo na parte inferior */
+    bottom: 0; /* Posiciona na parte inferior */
+    left: 0; /* Garante que ocupe toda a largura */
+    right: 0; /* Garante que ocupe toda a largura */
+    text-align: center; /* Alinha o texto ao centro */
+    border-top: 1px solid var(--color-neutral-30); /* Linha de separação acima do copyright */
+}
+
+@media screen and (max-width: 768px) {
+    #footer_content {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem;
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    #footer_content {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+    }
+
+    #footer_social_media {
+        justify-content: center;
+    }
+
+    #footer_sub {
+        align-items: center;
+    }
+}

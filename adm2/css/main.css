@@ -1,0 +1,477 @@
+/* =========== Google Fonts ============ */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+/* =============== Globals ============== */
+* {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --nav: rgb(6, 30, 107);
+  --form:  rgb(216, 213, 213);
+  --back: #e4e1e1;
+  --text1: #f5f5f5;
+  --text2: #000000;
+  --text3: #999;
+}
+
+body {
+  min-height: 10vh;
+  overflow-x: hidden;
+}
+
+h1.nome{
+  text-align: center;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.logo{
+  text-align: center;
+  display: flex;
+  transition: all 0.5s ease;
+  margin: 15px 1px 10px;
+  gap: 15px;
+    
+}
+  
+.logo img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  
+}
+
+.title-b{
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+/* =============== Navegação ================ */
+.navigation {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  background: var(--nav);
+  border-left: 10px solid var(--nav);
+  transition: 0.5s;
+  overflow: hidden;
+}
+.navigation.active {
+  width: 80px;
+}
+
+.navigation ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navigation ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.navigation ul li:hover,
+.navigation ul li.hovered {
+  background-color: var(--back);
+}
+
+.navigation ul li:nth-child(1) {
+  margin-bottom: 40px;
+  pointer-events: none;
+}
+
+.navigation ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: var(--back);
+}
+.navigation ul li:hover a,
+.navigation ul li.hovered a {
+  color: var(--text2);
+}
+
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 75px;
+  text-align: center;
+}
+.navigation ul li a .icon ion-icon {
+  font-size: 1.75rem;
+}
+
+.navigation ul li a .title {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+}
+
+/* --------- curve outside ---------- */
+.navigation ul li:hover a::before,
+.navigation ul li.hovered a::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px 35px 0 10px var(--back);
+  pointer-events: none;
+}
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px var(--back);
+  pointer-events: none;
+}
+
+.main {
+  position: absolute;
+  width: calc(100% - 250px);
+  left: 250px;
+  min-height: 100vh;
+  background: var(--back);
+  transition: 0.5s;
+  display: 1;
+}
+.main.active {
+  width: calc(100% - 80px);
+  left: 80px;
+}
+  
+.topbar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+  
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+/* ======= Recent Orders ======= */
+
+.details {
+  width: 100%;
+  max-width: 1200px;
+  margin: 90px auto;
+  overflow: hidden;
+  box-shadow: 0 .4rem .8rem #0005;
+  border-radius: 20px;
+}
+
+.details .recentOrders {
+  position: relative;
+  display: grid;
+  min-height: 600px;
+  background: var(--form);
+  padding: 30px;
+  
+  border-radius: 20px;
+}
+
+
+.details .cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cardHeader h2 {
+  font-weight: 600;
+  color: var(--text2);
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+
+}
+
+
+
+/* ======= Formulario ======= */
+form {
+    margin-top: 20px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-column {
+  width: 48%;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, select {
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+input[type="number"],
+input[type="email"],
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="file"] {
+  width: 100%;
+  background-color: #f2f2f2;
+}
+input[type="date"], input[type="file"] {
+  cursor: pointer;
+}
+
+select {
+  width: 100%;
+  cursor: pointer;
+}
+
+
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+input[type="file"] {
+  margin-bottom: 15px;
+}
+
+.button-form {
+  background-color: #060f96;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 10rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+
+}
+
+
+.button-form:hover {
+  opacity: 0.9;
+}
+
+
+.button {
+  background-color: #060f96;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 10rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+
+}
+.button:hover {
+  opacity: 0.9;
+}
+
+
+main.table {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 90vh;
+  background-color: #fff5;
+  backdrop-filter: blur(7px);
+  box-shadow: 0 .4rem .8rem #0005;
+  border-radius: .8rem;
+
+  overflow: hidden;
+}
+
+.table__header {
+  width: 100%;
+  height: 10%;
+  background-color: #fff4;
+  padding: .8rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table__body {
+  width: 95%;
+  max-height: calc(89% - 1.6rem);
+  background-color: #fffb;
+
+  margin: .8rem auto;
+  border-radius: .6rem;
+
+  overflow: auto;
+  overflow: overlay;
+}
+
+
+.table__body::-webkit-scrollbar{
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.table__body::-webkit-scrollbar-thumb{
+  border-radius: .5rem;
+  background-color: #0004;
+  visibility: hidden;
+}
+
+.table__body:hover::-webkit-scrollbar-thumb{ 
+  visibility: visible;
+}
+
+
+table {
+  width: 100%;
+}
+
+
+table, th, td {
+  border-collapse: collapse;
+  padding: 1rem;
+  text-align: left;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #d5d1defe;
+  text-transform: capitalize;
+}
+
+tr:nth-child(even) {
+  background-color: #0000000b;
+}
+
+tr {
+  --delay: .1s;
+  transition: .5s ease-in-out var(--delay), background-color 0s;
+}
+
+tr.hide {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+tr:hover {
+  background-color: rgba(143, 43, 43, 0.4);
+}
+
+tr td {
+  transition: .2s ease-in-out;
+}
+
+tr.hide td,
+tr.hide td p {
+  padding: 0;
+  font: 0 / 0 sans-serif;
+  transition: .2s ease-in-out .5s;
+}
+
+@media print {
+  .table, .table__body {
+   overflow: visible;
+   height: auto;
+   width: auto;
+  }
+ }
+
+
+@media (max-width: 1000px) {
+  td:not(:first-of-type) {
+      min-width: 12.1rem;
+  }
+}
+
+
+
+
+/* Mensagem de aviso */
+p {
+    text-align: center;
+    color: #f44336;
+    font-size: 18px;
+}
+
+button {
+  padding: 8px 12px;
+  gap: 20px;
+  font-size: 14px;
+  color: rgb(254, 254, 254);
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  
+}
+
+button:hover {
+  opacity: 0.9;
+}
+ 
+button:first-child {
+  background-color: #2196F3; 
+}
+button:nth-child(2) {
+  background-color: #FFC107; 
+}
+
+button:nth-child(3) {
+  background-color: #f44336;
+}

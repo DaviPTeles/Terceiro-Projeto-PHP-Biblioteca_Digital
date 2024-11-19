@@ -1,0 +1,39 @@
+.cookis-msg {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 1000;
+}
+
+.cookis-msg.show {
+    transform: translateY(0);
+}
+
+.cookis-txt a {
+    color: #054092; /* Dourado */
+    text-decoration: underline;
+}
+
+.cookis-btn {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.cookis-btn button {
+    background-color: #103594; /* Dourado */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cookis-btn button:hover {
+    background-color: #002287; /* Laranja */
+}
